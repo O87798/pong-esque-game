@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Racquet {
 
-	static int x = 50;
+	static int x = 200;
 	static int xa = 0;
 	static int y = 230;
 	static int width = 60;
