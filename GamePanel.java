@@ -54,7 +54,7 @@ public class GamePanel extends JPanel {
 
 	public void onDeath() {
 		if (!isDead) {
-			System.out.println("You Died!");
+			Main.onDeath();
 			isDead = true;
 		}
 	}

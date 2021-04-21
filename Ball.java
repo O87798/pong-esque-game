@@ -34,6 +34,7 @@ public class Ball {
 		if (y + ya > panel.getHeight() - ballHeight) {
 			ya = 0;
 			xa = 0;
+			racquet.xa = 0;
 		}
 
 		x = x + xa;

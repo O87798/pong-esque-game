@@ -3,11 +3,15 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Main {
+
+	static JFrame frame;
+	static GamePanel panel;
+
 	public static void main(String[] args) throws InterruptedException {
-		JFrame frame = new JFrame("idk what this is");
+		frame = new JFrame("idk what this is");
 		frame.setSize(300,300);
 
-		GamePanel panel = new GamePanel();
+		panel = new GamePanel();
 
 		frame.add(panel);
 
@@ -21,10 +25,19 @@ public class Main {
 		panel.requestFocusInWindow();
 		panel.initColl();
 
+		//game loop
 		while (true) {
 			panel.move();
 			panel.repaint();
 			Thread.sleep(10);
 		}
+	}
+
+	public static void onDeath() {
+		JLabel deathMSG = new JLabel("You Died :(",JLabel.CENTER);
+		deathMSG.setFont(new Font(deathMSG.getFont().getName(), Font.PLAIN, 50));
+		panel.add(deathMSG);
+		frame.add(panel);
+		frame.setVisible(true);
 	}
 }
