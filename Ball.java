@@ -20,7 +20,7 @@ public class Ball {
 	}
 
 	public void initCollision() {
-		coll = new Rectangle(x,y,ballWidth,ballHeight);
+		coll = new Rectangle(x,y,ballHeight,ballWidth);
 	}
 
 	public static void move() {
@@ -40,7 +40,7 @@ public class Ball {
 		x = x + xa;
 		y = y + ya;
 
-		coll.setBounds(x,y+ballHeight,ballWidth,1);
+		coll.setBounds(x,y,ballWidth,ballHeight);
 
 		if (coll.intersects(racquet.coll)) {
 			ya = -1;
