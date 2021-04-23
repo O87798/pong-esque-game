@@ -40,7 +40,7 @@ public class Ball {
 		x = x + xa;
 		y = y + ya;
 
-		coll.setBounds(x,y,ballWidth,ballHeight);
+		coll.setBounds(x,y+ballHeight,ballWidth,1);
 
 		if (coll.intersects(racquet.coll)) {
 			ya = -1;
