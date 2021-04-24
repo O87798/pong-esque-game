@@ -1,0 +1,1 @@
+javac *.java -d 'class files' && jar cvfm 'compiled jar/bounce.jar' Manifest.txt class\ files/*.class
