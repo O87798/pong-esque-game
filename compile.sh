@@ -1,1 +1,1 @@
-javac *.java && jar cvfm 'compiled jar/bounce.jar' Manifest.txt *.class
+javac *.java && jar cvfm 'compiled jar/bounce.jar' Manifest.txt *.class && mv *.class 'old class files'
